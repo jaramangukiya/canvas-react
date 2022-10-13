@@ -1,6 +1,4 @@
 import { Button, Col, Container, Form, InputGroup, ListGroup, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
-import '../css/style.css';
-import '../css/media.css';
 
 function Layout(props) {
     return (
@@ -8,8 +6,7 @@ function Layout(props) {
             <Navbar bg='light' expand='md' className='primary-font'>
                 <Container>
                     <Navbar.Brand href='#'>
-                        {/* <Image src='./img/logo.png'></Image> */}
-                        <img src='../img/logo.jpg'></img>
+                        <img src='img/logo.png'></img>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='toggle' className='shadow-none' />
                     <Navbar.Collapse id='toggle'>
@@ -34,6 +31,7 @@ function Layout(props) {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            {props.children}
             <Container className='padding100 contact text-uppercase'>
                 <Row>
                     <Col xs={6} md={3} lg={2}>
@@ -83,8 +81,8 @@ function Layout(props) {
             <div className="light-bg py-5">
                 <Container className="text-muted">
                     <div className="d-flex justify-content-between">
-                        <p>© 2020 All Rights Reserved by Canvas Inc.</p>
-                        <ul className="d-flex footer-link">
+                        <p className='m-0'>© 2020 All Rights Reserved by Canvas Inc.</p>
+                        <ul className="d-flex footer-link m-0">
                             <li>Terms of Use</li>
                             <li> / </li>
                             <li>Privacy Policy</li>

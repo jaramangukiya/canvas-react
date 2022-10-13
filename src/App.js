@@ -1,15 +1,18 @@
 import './App.css';
 import Layout from './assest/layout/layout';
-import './assest/css/style.css';
-import './assest/css/media.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './assest/home';
+// import Footer from './assest/footer';
 
 function App() {
   return (
-    <div>
-      <Layout></Layout>
-    </div>
-  );
+    <>
+      <Layout>
+
+        <Home />
+        </Layout>
+        </>
+        );
 }
 
-export default App;
+        export default App;
