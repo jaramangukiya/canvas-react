@@ -55,7 +55,9 @@ img {
 .fs-16 {
     font-size: 16px;
 }
-
+.text-green{
+    color: var(--light);
+}
 ol,
 ul {
     padding: 0;

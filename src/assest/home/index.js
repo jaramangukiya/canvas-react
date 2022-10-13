@@ -1,8 +1,50 @@
 import { Carousel, Col, Container, Row } from "react-bootstrap";
 import CommonHeading from "../extra/common-heading";
 import Deatils from "../extra/deatails";
+import ProductInfo from "../extra/productinfo";
 
 function Home() {
+    const productList = [
+        {
+            id: 1,
+            img: "img/2.jpg",
+            name: "Light Grey Sofa",
+            price: "$799.99",
+        }, {
+            id: 2,
+            img: "img/3.jpg",
+            name: "Celling Lights",
+            price: "$39.49",
+        }, {
+            id: 3,
+            img: "img/4.jpg",
+            name: "High Stand Chair",
+            price: "$24.99",
+        }, {
+            id: 4,
+            img: "img/5.jpg",
+            name: "Dining Sofa with Tea-table",
+            price: "$99.99",
+        }, {
+            id: 5,
+            img: "img/6-1.jpg",
+            name: "Bathroom Cloths Shelves",
+            price: "$23",
+        },
+        {
+            id: 6,
+            img: "img/7.jpg",
+            name: "Golden Lamp for Room",
+            price: "$12.99",
+        },
+        {
+            id: 7,
+            img: "img/8.jpg",
+            name: "White Cuddle Chair-Cusions",
+            price: "$29.99",
+        },
+        
+    ]
     return (
         <>
 
@@ -124,6 +166,64 @@ function Home() {
                         graphics are optimized"></Deatils>
                         <Deatils icon="fa-solid fa-face-smile" productTitle="Happily Service" description="Canvas includes tons of optimized code that are completely customizable and deliver unmatched
                         fast performance."></Deatils>
+                    </Row>
+                </Container>
+            </section>
+            <section>
+                <Col xs={4} className="mx-auto choose-img">
+                    <Row className="justify-content-center align-items-center">
+                        <Col xs={3}>
+                            <div className="w-100">
+                                <a href="#"><img src="img/amazon.svg" className="w-100" /></a>
+                            </div>
+                        </Col>
+                        <Col xs={3}>
+                            <div className="w-100">
+                                <a href="#"><img src="img/cnn.svg" className="w-100" /></a>
+                            </div>
+                        </Col>
+                        <Col xs={3}>
+                            <div className="w-100">
+                                <a href="#"><img src="img/google.svg" className="w-100" /></a>
+                            </div>
+                        </Col>
+                        <Col xs={3}>
+                            <div className="w-100">
+                                <a href="#"><img src="img/linkedin.svg" className="w-100" /></a>
+                            </div>
+                        </Col>
+                        <Col xs={3}>
+                            <div className="w-100">
+                                <a href="#"><img src="img/netflix.svg" className="w-100" /></a>
+                            </div>
+                        </Col>
+                        <Col xs={3}>
+                            <div className="w-100">
+                                <a href="#"><img src="img/jetblue.svg" className="w-100" /></a>
+                            </div>
+                        </Col>
+                        <Col xs={3}>
+                            <div className="w-100">
+                                <a href="#"><img src="img/github.svg" className="w-100" /></a>
+                            </div>
+                        </Col>
+                    </Row>
+                </Col>
+            </section>
+            <section className="light-bg padding100">
+                <Container>
+                    <Row>
+                        <Col xs={12} md={6} lg={3} >
+                            <CommonHeading title="Top Arrivals"></CommonHeading>
+                            <p className="fs-18 pb-5">Compellingly cultivate synergistic infrastructures rather than fully tested opportunities. Synergistically evisculate web-enabled interfaces.</p>
+                            <a href="#" className="arrivals-btn text-decoration-none px-3 py-2 me-2">Top Arrivals</a>
+                            <a href="#" className="arrivals-btn text-decoration-none px-3 py-2">Popular</a>
+                        </Col>
+                        {productList.map((product, index) => {
+                            return (
+                                <ProductInfo key={`productdetail-${index}`} item={product}></ProductInfo>
+                            )
+                        })}
                     </Row>
                 </Container>
             </section>
