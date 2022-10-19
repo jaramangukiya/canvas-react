@@ -2,6 +2,7 @@ import { Carousel, Col, Container, Row } from "react-bootstrap";
 import CommonHeading from "../extra/common-heading";
 import Deatils from "../extra/deatails";
 import ProductInfo from "../extra/productinfo";
+import Topproduct from "../extra/topproduct";
 
 function Home() {
     const productList = [
@@ -43,11 +44,42 @@ function Home() {
             name: "White Cuddle Chair-Cusions",
             price: "$29.99",
         },
-        
-    ]
+
+    ];
+    const topproduct = [
+        {
+            id: 1,
+            img: "img/sofas.jpg",
+            name: "sofa",
+        },
+        {
+            id: 2,
+            img: "img/tables.jpg",
+            name: "Table",
+        },
+        {
+            id: 3,
+            img: "img/chairs.jpg",
+            name: "chair",
+        },
+        {
+            id: 4,
+            img: "img/lights.jpg",
+            name: "light",
+        },
+        {
+            id: 5,
+            img: "img/wardrobes.jpg",
+            name: "Wardrobes",
+        },
+        {
+            id: 6,
+            img: "img/beds.jpg",
+            name: "Beds",
+        },
+    ];
     return (
         <>
-
             <Carousel>
                 <Carousel.Item>
                     <img
@@ -224,6 +256,141 @@ function Home() {
                                 <ProductInfo key={`productdetail-${index}`} item={product}></ProductInfo>
                             )
                         })}
+                    </Row>
+                </Container>
+            </section>
+            <section className="padding100">
+                <CommonHeading title="Shop by Category"></CommonHeading>
+                <Container>
+                    <Row>
+                        {topproduct.map((pro, index) => {
+                            return (
+                                <Topproduct pro={pro}></Topproduct>
+                            )
+                        })}
+                    </Row>
+                </Container>
+            </section>
+            <section>
+                <Container fluid className="p-0 overflow-hidden explore">
+                    <Row className="align-items-center">
+                        <Col xs={12} lg={8} className="p-0">
+                            <img src="img/section.jpg" className="w-100"></img>
+                        </Col>
+                        <Col xs={12} lg={4} className="p-5">
+                            <div className="common-content">
+                                <h2 className="fs-18">Explore your Home & Office with our Furnitures</h2>
+                                <p className="py-4">Compellingly cultivate synergistic infrastructures rather than fully tested opportunities. Synergistically evisculate web-enabled interfaces for market positioning web services. Continually create business infomediaries and interdependent products.</p>
+                                <a href="#" className="text-decoration-none px-3 py-2 explore-btn">Discover Now
+                                    <i className="fa-solid fa-arrow-right-long ps-2"></i></a>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <section className="bg-skin rating">
+                <Container className="py-5">
+                    <Row>
+                        <Deatils icon="fa-solid fa-circle-check" productTitle="Original & Excellent Quality" description="Completely formulate top-line resources rather than cross-media portals cross-platform solutions."></Deatils>
+                        <Deatils icon="fa-solid fa-truck" productTitle="Free & Fast Shipping" description="Rapidiously optimize user-centric catalysts for change vis-a-vis granular 'outside the box' thinking."></Deatils>
+                        <Deatils icon="fa-solid fa-shield-heart" productTitle="Secure Payment" description="Continually recaptiualize 2.0 action items after global information. Efficiently strategize holistic networks."></Deatils>
+                    </Row>
+                </Container>
+            </section>
+            <section className="bg-green padding100 insta">
+                <Container>
+                    <Row className="align-items-center">
+                        <Col xs={12} md={6} lg={4} className="order-css-1">
+                            <div className="w-100 p-3">
+                                <Row>
+                                    <Col xs={6} className="p-0">
+                                        <div className="w-100 p-1">
+                                            <div className="insta-img-box insta-img-1-1">
+                                                <div className="black-ovarlay text-center">
+                                                    <i className="fa-brands fa-instagram my-5 text-white insta-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col xs={6} className="p-0">
+                                        <div className="w-100 p-1">
+                                            <div className="insta-img-box insta-img-1-2">
+                                                <div className="black-ovarlay text-center">
+                                                    <i className="fa-brands fa-instagram my-5 text-white insta-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col xs={6} className="p-0">
+                                        <div className="w-100 p-1">
+                                            <div className="insta-img-box insta-img-1-3">
+                                                <div className="black-ovarlay text-center">
+                                                    <i className="fa-brands fa-instagram my-5 text-white insta-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col xs={6} className="p-0">
+                                        <div className="w-100 p-1">
+                                            <div className="insta-img-box insta-img-1-4">
+                                                <div className="black-ovarlay text-center">
+                                                    <i className="fa-brands fa-instagram my-5 text-white insta-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </Col>
+                        <Col xs={12} lg={4} className="text-white order-css-2 text-center">
+                            <div className="w-100">
+                                <i className="fa-brands fa-instagram"></i>
+                                <h3 className="my-3">Don't Follow the Crowd, Follow us on</h3>
+                                <a href="#" className="text-white insta-btn rounded-0 py-2 text-decoration-none px-3 fs-18 shadow-none">@semicolonweb</a>
+                            </div>
+                        </Col>
+                        <Col xs={12} md={6} lg={4} className="order-css-3">
+                            <div className="w-100 p-3">
+                                <Row>
+                                    <Col xs={6} className="p-0">
+                                        <div className="w-100 p-1">
+                                            <div className="insta-img-box insta-img-2-1">
+                                                <div className="black-ovarlay text-center">
+                                                    <i className="fa-brands fa-instagram my-5 text-white insta-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col xs={6} className="p-0">
+                                        <div className="w-100 p-1">
+                                            <div className="insta-img-box insta-img-2-2">
+                                                <div className="black-ovarlay text-center">
+                                                    <i className="fa-brands fa-instagram my-5 text-white insta-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col xs={6} className="p-0">
+                                        <div className="w-100 p-1">
+                                            <div className="insta-img-box insta-img-2-3">
+                                                <div className="black-ovarlay text-center">
+                                                    <i className="fa-brands fa-instagram my-5 text-white insta-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col xs={6} className="p-0">
+                                        <div className="w-100 p-1">
+                                            <div className="insta-img-box insta-img-2-4">
+                                                <div className="black-ovarlay text-center">
+                                                    <i className="fa-brands fa-instagram my-5 text-white insta-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
             </section>

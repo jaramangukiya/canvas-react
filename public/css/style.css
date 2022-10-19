@@ -49,7 +49,7 @@ img {
 }
 
 .fs-18 {
-    font-size: 18px;
+    font-size: 18px ;
 }
 
 .fs-16 {
@@ -1270,4 +1270,9 @@ footer {
 .item
 {
     position: relative;
+}
+.topproducttitle{
+    position: absolute;
+    background-color: var(--bs-white);
+    top: 16px;
 }
